@@ -1,0 +1,19 @@
+finch stop $(finch ps -a -q)
+finch rm $(finch ps -a -q)
+finch system prune
+finch compose -f docker-compose-non-dev.yml up --build
+openssl rand -base64 42
+
+you MUST use the following command to remove ALL data if you restart the build process or set a secret key:
+finch compose down -v 
+
+
+Remember to 
+create requirements-local.txt in the docker folder
+change volumes
+Add port 8888 for jupyter
+remove examples from .env-non-dev file in docker folder
+edit secret key in 
+    .env-non-dev file (.env doesn't seem to work? gives a utf-8 error)
+    superset_config.py (just add a SECRET_KEY='blah' line to this file) docker/pythonpath_dev/superset_config.py, 
+    config.py (this is where the env var is set or overriden by superset_config)

@@ -1,0 +1,7 @@
+PyAthena
+# pandas
+duckdb
+# fugue[duckdb,sql] # Includes duckdb
+jupyterlab 
+jupysql 
+duckdb-engine
