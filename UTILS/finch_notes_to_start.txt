@@ -1,12 +1,8 @@
-finch stop $(finch ps -a -q)
-finch rm $(finch ps -a -q)
-finch system prune
-finch compose -f docker-compose-non-dev.yml up --build
+Generate a key:
 openssl rand -base64 42
 
 you MUST use the following command to remove ALL data if you restart the build process or set a secret key:
 finch compose down -v 
-
 
 Remember to 
 create requirements-local.txt in the docker folder

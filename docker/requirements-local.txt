@@ -1,4 +1,4 @@
-PyAthena
+# PyAthena
 # pandas
 duckdb
 # fugue[duckdb,sql] # Includes duckdb

@@ -1,0 +1,1 @@
+finch exec -it superset_app bash
